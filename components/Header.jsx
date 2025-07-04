@@ -32,8 +32,8 @@ const header = () => {
              <nav className="flex items-center justify-between px-4 sm:px-8 lg:px-10 py-4">
                 <div className="flex items-center gap-4 sm:gap-8">
                     <Link href="/" className='flex gap-2'> 
-                        <Image src="/logoo.png" alt="Logo" width={140} height={40} className="h-8 sm:h-7 w-auto object-contain cursor-pointer" />
-                        <Image src="/profile1.png" alt="Logo" width={140} height={40} className="h-8 sm:h-8 w-auto object-contain cursor-pointer" />
+                        <Image src="/logoo.png" alt="Logo" width={140} height={40} className="h-6 sm:h-6 w-auto object-contain cursor-pointer" />
+                        <Image src="/profile1.png" alt="Logo" width={140} height={40} className="h-7 sm:h-7 w-auto object-contain cursor-pointer" />
                     </Link>
                 </div>
                 <div className="flex items-center gap-4">
@@ -52,7 +52,7 @@ const header = () => {
                      <Button className="flex items-center gap-2 px-3 py-2 text-xs sm:text-sm md:text-base">
                           < StarsIcon className='h-4 w-4' />
                           <span className='hidden xs:inline md:block'>Growth tools</span>
-                          < ChevronDown classname = "h-4 w-4" />
+                          < ChevronDown className = "h-4 w-4" />
                       </Button>
                  </DropdownMenuTrigger>
 

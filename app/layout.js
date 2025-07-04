@@ -50,9 +50,27 @@ export default function RootLayout({ children }) {
 
             {/* Main content */}
 
-           <main className="min-h-screen container mx-auto px-4 sm:px-6 lg:px-8">
+           {/* <main className="min-h-screen container mx-auto px-4 sm:px-6 lg:px-8">
             {children}
-           </main>
+           </main> */}
+
+      {/* <main className="relative w-full h-full min-h-screen">
+       <div className="main-grid-bg" />
+       <div className="relative z-10">
+       
+        {children}
+        </div>
+      </main> */}
+      <main className="relative w-full h-full min-h-screen">
+  <div className="main-grid-bg">
+    <div className="main-grid-bg__grid"></div>
+    <div className="main-grid-bg__circle"></div>
+  </div>
+  <div className="relative z-10">
+   {children}
+  </div>
+</main>
+
 
            {/* {footer} */}
            <footer className="bg-muted/50 py-8 sm:py-10 lg:py-12">

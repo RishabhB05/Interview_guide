@@ -1,3 +1,57 @@
+/* Grid background for use only inside main (parent must be relative) */
+
+.main-grid-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* .main-grid-bg__circle {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, hwb(0 0% 100% / 0.302) 0%, transparent 80%);
+  z-index: 1;
+} */
+
+.main-grid-bg__grid {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(255,255,255,0.08) 1px,
+    transparent 1px
+  ),
+  linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.08) 1px,
+    transparent 1px
+  );
+  background-size: 50px 50px;
+  z-index: 0;
+}
+
+.main-grid-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, hsla(0, 0%, 0%, 0.302) 0%, transparent 70%);
+  z-index: 1;
+}
+
+
+
+
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -120,3 +174,26 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* 
+@layer utilities{
+   .gradient {
+    @apply bg-gradient-to-b from-gray-400 via-gray-200 to-gray-600;
+   }
+   .gradient-title {
+    @apply gradient font-extrabold tracking-tighter text-transparent bg-clip-text pb-2 pr-2;
+   }
+} */
+
+/* .hero-image-wrapper{
+    perspective: 1000px;
+}
+.hero-image{
+  transform: rotateX(15deg) scale(1);
+  transition: transform 0.5s ease-out;
+  will-change: transform ;
+}
+
+.hero-image.scrolled {
+  transform: rotateX(0deg) scale(1) translate(40px);
+} */
