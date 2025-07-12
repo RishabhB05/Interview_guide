@@ -20,12 +20,14 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { checkUser } from '@/lib/checkUser'
 
 
 
 
 
-const header = () => {
+const header = async() => {
+  await checkUser();
   return (
     <div>
        <header className="border-b border-gray-200 dark:border-gray-700">
